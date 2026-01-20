@@ -9,7 +9,8 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm fmt \
     cereal      \
     cxxopts     \
-    chrono-date
+    chrono-date \
+    rtmidi
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
