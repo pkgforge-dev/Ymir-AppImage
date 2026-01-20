@@ -37,7 +37,7 @@ build() {
         -D CMAKE_C_COMPILER=clang
         -D CMAKE_CXX_COMPILER=clang++
         -D CMAKE_MAKE_PROGRAM=ninja
-        -D CMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake
+        #-D CMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake
         -D Ymir_ENABLE_TESTS=OFF
         -D Ymir_ENABLE_DEVLOG=OFF
         -D Ymir_ENABLE_IMGUI_DEMO=OFF
