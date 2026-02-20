@@ -10,7 +10,7 @@ pacman -Syu --noconfirm \
     autoconf-archive \
     clang            \
     cmake            \
-    libdecor         \ 
+    libdecor         \
     libtool          \
     pipewire-audio   \
     pipewire-jack    \
