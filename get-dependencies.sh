@@ -9,7 +9,6 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     cmake         \
     pipewire-jack \
-    sdl3          \
     vcpkg
 
 echo "Installing debloated packages..."
@@ -46,4 +45,5 @@ local cmake_options=(
     fi
 cmake .. "${cmake_options[@]}"
 make -j$(nproc)
-mv - ymir-sdl3 ../../AppDir/bin
+mv -v apps/ymir-sdl3/ymir-sdl3-0.3.0 ../../AppDir/bin/ymir-sdl3
+mv -v ../apps/ymir-sdl3/res/ymir.png ../../AppDir
