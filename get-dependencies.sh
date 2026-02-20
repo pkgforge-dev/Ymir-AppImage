@@ -40,7 +40,7 @@ cmake_opts=(
 )
 
 # Enable AVX2 only for x86_64
-if [ "$CARCH" == "x86_64" ]; then
+if [ "$ARCH" == "x86_64" ]; then
     cmake_opts+=(-D Ymir_AVX2=ON)
 else
     cmake_opts+=(-D Ymir_AVX2=OFF)
