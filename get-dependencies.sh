@@ -32,6 +32,7 @@ echo "$VERSION" > ~/version
 mkdir -p ./AppDir/bin
 cd ./Ymir
 mkdir -p build && cd build
+export VCPKG_BUILD_TYPE=release
 cmake_opts=(
     -D Ymir_ENABLE_TESTS=OFF
     -D Ymir_ENABLE_DEVLOG=OFF
@@ -39,7 +40,6 @@ cmake_opts=(
     -D Ymir_ENABLE_SANDBOX=OFF
     -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake
     -DCMAKE_BUILD_TYPE=Release
-    -DVCPKG_BUILD_TYPE=release
     --fresh
 )
 # Enable AVX2 only for x86_64
