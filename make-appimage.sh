@@ -10,7 +10,6 @@ export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export DEPLOY_OPENGL=1
 export DEPLOY_VULKAN=1
-#export DEPLOY_PIPEWIRE=1
 
 # Deploy dependencies
 quick-sharun ./AppDir/bin/ymir-sdl3
