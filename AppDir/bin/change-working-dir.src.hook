@@ -1,3 +1,4 @@
+#!/bin/false
 dir=${XDG_DATA_HOME:-~/.local/share}/StrikerX3/Ymir
 mkdir -p "$dir"
 cd "$dir"
