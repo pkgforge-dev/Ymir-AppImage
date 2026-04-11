@@ -1,0 +1,4 @@
+#!/bin/sh
+dir=$DATADIR/StrikerX3/Ymir
+mkdir -p "$dir"
+cd "$dir"
