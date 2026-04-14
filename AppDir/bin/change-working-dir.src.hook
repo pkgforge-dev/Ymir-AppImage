@@ -1,4 +1,4 @@
 #!/bin/sh
-dir=${XDG_DATA_HOME:-~/.local/share}/StrikerX3/Ymir
+dir=$DATADIR/StrikerX3/Ymir
 mkdir -p "$dir"
 cd "$dir"
