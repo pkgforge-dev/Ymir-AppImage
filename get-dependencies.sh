@@ -7,22 +7,24 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-    autoconf-archive \
-    clang            \
-    cmake            \
-    libdecor         \
-    python           \
-    vcpkg
+    autoconf-archive  \
+    clang             \
+    cmake             \
+    directx-shader-compiler \
+    shaderc           \
+    spirv-cross \
+    spirv-headers \
+    spirv-llvm-translator \
+    spirv-tools       \
+    vcpkg             \
+    vulkan-headers    \
+    vulkan-icd-loader
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano
+get-debloated-pkgs --add-common --prefer-nano libdecor-mini
 
-# Comment this out if you need an AUR package
-#make-aur-package 
-
-# If the application needs to be manually built that has to be done down here
-echo "Making nightly build of Ymir..."
+echo "Building Ymir..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/StrikerX3/Ymir"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
@@ -37,17 +39,18 @@ set -- \
     -D Ymir_ENABLE_DEVLOG=OFF \
     -D Ymir_ENABLE_IMGUI_DEMO=OFF \
     -D Ymir_ENABLE_SANDBOX=OFF \
-    -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake \
-    -DCMAKE_BUILD_TYPE=Release \
+    -D Ymir_ENABLE_YMDASM=OFF \
+    -D Ymir_ENABLE_UPDATE_CHECKS=OFF \
+    -D CMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake \
+    -D CMAKE_BUILD_TYPE=Release \
     --fresh
 # Enable AVX2 only for x86_64
-if [ "$ARCH" = "x86_64" ]; then
-    set -- "$@" -D Ymir_AVX2=ON
-else
-   set -- "$@" -D Ymir_AVX2=OFF -DCMAKE_CXX_FLAGS="-flax-vector-conversions"
-fi
+#if [ "$ARCH" = "x86_64" ]; then
+#    set -- "$@" -D Ymir_AVX2=ON
+#else
+   set -- "$@" -D Ymir_AVX2=OFF -D CMAKE_CXX_FLAGS="-flax-vector-conversions"
+#fi
 
 cmake .. "$@"
 make -j$(nproc)
-mv -v apps/ymir-sdl3/ymir-sdl3-0.3.0 ../../AppDir/bin/ymir-sdl3
-mv -v ../apps/ymir-sdl3/res/ymir.png ../../AppDir
+mv -v apps/ymir-sdl3/ymir-sdl3-* ../../AppDir/bin/ymir-sdl3
