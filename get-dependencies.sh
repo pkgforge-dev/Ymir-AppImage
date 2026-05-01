@@ -49,5 +49,5 @@ fi
 
 cmake .. "$@"
 make -j$(nproc)
-mv -v apps/ymir-sdl3/ymir-sdl3 ../../AppDir/bin/ymir-sdl3
+mv -v apps/ymir-sdl3/ymir-sdl3 ../../AppDir/bin
 mv -v ../apps/ymir-sdl3/res/ymir.png ../../AppDir
