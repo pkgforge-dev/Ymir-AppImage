@@ -41,11 +41,11 @@ set -- \
     -DCMAKE_BUILD_TYPE=Release \
     --fresh
 # Enable AVX2 only for x86_64
-if [ "$ARCH" = "x86_64" ]; then
-    set -- "$@" -D Ymir_AVX2=ON
-else
+#if [ "$ARCH" = "x86_64" ]; then
+#    set -- "$@" -D Ymir_AVX2=ON
+#else
    set -- "$@" -D Ymir_AVX2=OFF -DCMAKE_CXX_FLAGS="-flax-vector-conversions"
-fi
+#fi
 
 cmake .. "$@"
 make -j$(nproc)
