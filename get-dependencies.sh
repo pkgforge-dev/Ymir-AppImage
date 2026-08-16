@@ -12,7 +12,9 @@ pacman -Syu --noconfirm \
     cmake            \
     libdecor         \
     python           \
-    vcpkg
+    shaderc          \
+    vcpkg            \
+    vulkan-headers
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
