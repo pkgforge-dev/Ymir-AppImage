@@ -35,6 +35,7 @@ set -- \
     -D Ymir_ENABLE_DEVLOG=OFF \
     -D Ymir_ENABLE_IMGUI_DEMO=OFF \
     -D Ymir_ENABLE_SANDBOX=OFF \
+    -D Ymir_ENABLE_UPDATE_CHECKS=OFF \
     -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake \
     -DCMAKE_BUILD_TYPE=Release \
     --fresh
