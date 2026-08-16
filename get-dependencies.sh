@@ -7,14 +7,15 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-    autoconf-archive \
-    clang            \
-    cmake            \
-    libdecor         \
-    python           \
-    shaderc          \
-    vcpkg            \
-    vulkan-headers
+    autoconf-archive  \
+    clang             \
+    cmake             \
+    libdecor          \
+    shaderc           \
+    spirv-tools       \
+    vcpkg             \
+    vulkan-headers    \
+    vulkan-icd-loader
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
