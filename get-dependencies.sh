@@ -34,6 +34,8 @@ set -- \
     -D Ymir_ENABLE_TESTS=OFF \
     -D Ymir_ENABLE_DEVLOG=OFF \
     -D Ymir_ENABLE_IMGUI_DEMO=OFF \
+    -D Ymir_ENABLE_IPO=OFF \
+    -D Ymir_EXTRA_INLINING=OFF \
     -D Ymir_ENABLE_SANDBOX=OFF \
     -D Ymir_ENABLE_YMDASM=OFF \
     -D Ymir_ENABLE_UPDATE_CHECKS=OFF \
