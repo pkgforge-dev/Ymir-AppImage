@@ -21,7 +21,7 @@ echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
-echo "Making nightly build of Ymir..."
+echo "Building Ymir..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/StrikerX3/Ymir"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
