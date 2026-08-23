@@ -10,7 +10,6 @@ pacman -Syu --noconfirm \
     autoconf-archive  \
     clang             \
     cmake             \
-    libdecor          \
     shaderc           \
     spirv-tools       \
     vcpkg             \
@@ -19,7 +18,7 @@ pacman -Syu --noconfirm \
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano
+get-debloated-pkgs --add-common --prefer-nano libdecor-mini
 
 echo "Building Ymir..."
 echo "---------------------------------------------------------------"
