@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Ymir
-GenericName=Sega Saturn Emulator
-Comment=Sega Saturn Emulator
-Exec=ymir-sdl3
-Icon=ymir-emu
-StartupWMClass=ymir-sdl3
-Categories=Game;Emulator;
