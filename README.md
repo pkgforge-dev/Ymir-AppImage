@@ -7,7 +7,7 @@
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/Ymir-AppImage)](https://github.com/pkgforge-dev/Ymir-AppImage/releases/latest)
 
 <p align="center">
-  <img src="https://github.com/StrikerX3/Ymir/blob/main/apps/ymir-sdl3/res/ymir.png" width="128" />
+  <img src="https://raw.githubusercontent.com/ymir-emu/Ymir/refs/heads/main/apps/ymir-sdl3/res/ymir.png" width="128" />
 </p>
 
 
