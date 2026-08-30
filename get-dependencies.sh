@@ -10,7 +10,6 @@ pacman -Syu --noconfirm \
     autoconf-archive  \
     clang             \
     cmake             \
-    glslang           \
     shaderc           \
     spirv-tools       \
     vcpkg             \
