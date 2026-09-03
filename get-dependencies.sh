@@ -12,6 +12,9 @@ pacman -Syu --noconfirm \
     cmake             \
     directx-shader-compiler \
     shaderc           \
+    spirv-cross \
+    spirv-headers \
+    spirv-llvm-translator \
     spirv-tools       \
     vcpkg             \
     vulkan-headers    \
