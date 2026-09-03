@@ -41,14 +41,14 @@ set -- \
     -D Ymir_ENABLE_SANDBOX=OFF \
     -D Ymir_ENABLE_YMDASM=OFF \
     -D Ymir_ENABLE_UPDATE_CHECKS=OFF \
-    -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake \
-    -DCMAKE_BUILD_TYPE=Release \
+    -D CMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake \
+    -D CMAKE_BUILD_TYPE=Release \
     --fresh
 # Enable AVX2 only for x86_64
 #if [ "$ARCH" = "x86_64" ]; then
 #    set -- "$@" -D Ymir_AVX2=ON
 #else
-   set -- "$@" -D Ymir_AVX2=OFF -DCMAKE_CXX_FLAGS="-flax-vector-conversions"
+   set -- "$@" -D Ymir_AVX2=OFF -D CMAKE_CXX_FLAGS="-flax-vector-conversions"
 #fi
 
 cmake .. "$@"
