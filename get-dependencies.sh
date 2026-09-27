@@ -13,9 +13,7 @@ pacman -Syu --noconfirm \
     directx-shader-compiler \
     ninja             \
     shaderc           \
-    spirv-cross \
-    spirv-headers \
-    spirv-llvm-translator \
+    spirv-headers     \
     vcpkg             \
     vulkan-headers    \
     vulkan-icd-loader
